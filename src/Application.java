@@ -1,13 +1,14 @@
 public class Application{
     public static void main(String[] args) {
-        Thread thread1=new MyThread();
-        thread1.setName("VrindThread");
+        Thread vrindThread=new MyThread();
+        vrindThread.setName("VrindThread");
 
-        Thread thread2=new MyThread();
-        thread2.setName("SherryThread");
+        Thread sherryThread=new MyThread();
+        sherryThread.setName("SherryThread");
 
-        thread1.start();
-        thread2.start();
+        vrindThread.start();
+        sherryThread.start();
+        sherryThread.interrupt();
 
         new Thread(){
             @Override
